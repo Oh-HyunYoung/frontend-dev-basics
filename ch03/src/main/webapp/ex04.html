@@ -49,8 +49,33 @@ body {
 
 .box8 {
 	border: 4px solid;
-
+	
+	/* 12[4(방향) x 3(속성)]가지의 방향, 두께, 속성, 컬러, 스타일링을 할 수 있다.
+	   방향(top, right, left, bottom), 두께(width), 속성(style), 컬러(color)
+	   (그중에 3가지)
+	*/
+	border-left-width: 1px;
+	border-left-style: dotted;
+	border-left-color: blue;
+	
+	/*
+		3가지 속성별 축약형이 4가지
+		3 * 4 = 12가지
+		(그중에 4가지)
+	*/
+	border-width: 1px 2px 3px 4px; /* T R B L */
+	border-width: 1px 2px 3px; 	  /* T (R L) B */
+	border-width: 1px 2px;     	  /* (T,B) (R,L) */
+	border-width: 1px;		 	  /* T, R, B, L */
+	
+	border-style: dashed dotted solid double;
+	
+	border-color: red green black blue;
+	
+	/* 보통은 다음과 같은 방식을 사용한다. (4방향 모두 width, style, color가 모두 동일하다면...) */
+	border: 1px solid #111; 
 }
+
 .box9 {
 	border: 4px none;
 
