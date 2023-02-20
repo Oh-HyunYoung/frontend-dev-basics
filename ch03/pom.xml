@@ -5,10 +5,10 @@
 		<artifactId>frontend-dev-basics</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>ch02</artifactId>
+	<artifactId>ch03</artifactId>
 	<packaging>war</packaging>
 	
 	<build>
-		<finalName>ch02</finalName>
+		<finalName>ch03</finalName>
 	</build>
 </project>
