@@ -6,18 +6,25 @@
 <link rel="stylesheet" type="text/css" href="/ch05/css/tabbox.css"><link>
 </head>
 <script>
-function onTabClicked() {
-	console.log('click')
+liSelected=null;
+
+function onTabClicked(li) {
+	if(liSelected != null){
+		liSelected.className = "";
+	}
+	
+	li.className = "selected";
+	liSelected = li;
 }
 </script>
 <body>
 <div class="tab-box">
 	<ul>
-	  <li onclick="onTabClicked()">메뉴 5</li>
-	  <li onclick="onTabClicked()">메뉴 4</li>
-      <li onclick="onTabClicked()">메뉴 3</li>
-      <li onclick="onTabClicked()">메뉴 2</li>
-      <li onclick="onTabClicked()">메뉴 1</li>
+	  <li onclick="onTabClicked(this)">메뉴 5</li>
+	  <li onclick="onTabClicked(this)">메뉴 4</li>
+      <li onclick="onTabClicked(this)">메뉴 3</li>
+      <li onclick="onTabClicked(this)">메뉴 2</li>
+      <li onclick="onTabClicked(this)">메뉴 1</li>
     </ul>
     <div>
     	탭뷰입니다.
