@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
+<meta charset="UTF-8">
 <script>
 window.n = "둘리";
 console.log(window.n, n);
@@ -11,9 +11,19 @@ console.log(window.email, email);
 
 setTimeout(function(){
 	var child = window.open("popup.html", "n-popup", "width=600, height=400");
+
+	setTimeout(function(){
+		// 자식창의 내용 바꾸기
+		child.document.write("<h1>popup contents changed!</h1>");
+	}, 2000);
+	
+	setTimeout(function(){
+		// 자식창 움직이기
+		child.moveTo(200, 200);
+	}, 4000);
+
 }, 2000);
 </script>
-
 </head>
 <body>
 <body>
