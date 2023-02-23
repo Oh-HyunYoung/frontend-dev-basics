@@ -31,7 +31,6 @@ var s = (function (a, b) {
     return a / 10 + b / 10;
 })(10, 20);
 
-
 console.log(s);
 
 // 가변 파라미터
@@ -50,16 +49,16 @@ console.log("=== 가변 파라미터 함수 sum() ======");
 
 var sum = function () {
     // console.log(arguments instanceof Array, arguments instanceof Object, arguments.length);
-
     var sum = 0;
+
     // for (var i = 0; i < arguments.length; i++) {
     //     sum += arguments[i];
     // }
 
     // Error
-    // arguments의 __proto__는 Object Prototype에 Chaindl 되어 있기 때문에...(arguments는 Object의 인스턴스이다.)
-    // arguments.forEach(function(e){
-    //     sum += e;
+    // arguments의 __proto__는 Object Prototype에 chain이 되어 있기 때문에...(arguments는 Object의 인스턴스이다.)
+    // arguments.forEach(function(e) {
+    //    sum += e;
     // });
 
     Array.prototype.forEach.call(arguments, function(e){
