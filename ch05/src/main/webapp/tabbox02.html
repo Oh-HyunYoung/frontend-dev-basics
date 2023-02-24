@@ -8,31 +8,30 @@
 <script>
 
 var onTabClicked = function() {
-	var liSelected = document.querySelectorAll('li.selected');
-	liSelected && (liSelected.className = '');	
+	var liSelected = document.querySelector('li.selected');
+	liSelected && (liSelected.className = '');
 	
 	this.className = "selected";
 }
 
 window.addEventListener('load', function(){
-	var divTabBox = document.getElementsByClassName("tab-box") [0];
+	var divTabBox = document.getElementsByClassName("tab-box")[0];
 	var ul = divTabBox.childNodes[1];
 	var lis = ul.getElementsByTagName('li');
 	
 	Array.prototype.forEach.call(lis, function(li){
-		li.addEventListener('click', onTabClicked); 
+		li.addEventListener('click', onTabClicked);
 	});
 });
-
 </script>
 <body>
 <div class="tab-box">
 	<ul>
-	  <li>메뉴 5</li>
-	  <li>메뉴 4</li>
-      <li>메뉴 3</li>
-      <li>메뉴 2</li>
-      <li>메뉴 1</li>
+        <li>메뉴5</li>
+        <li>메뉴4</li>
+        <li>메뉴3</li>
+        <li>메뉴2</li>
+        <li>메뉴1</li>
     </ul>
     <div>
     	탭뷰입니다.
