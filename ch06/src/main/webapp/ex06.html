@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script>
-window.onload = function(){
-	setTimeout(function(){
-		var h3Element = document.createElement("h3");
-		var h3TextNode = document.createTextNode("Hello DOM");
-		h3Element.append(h3TextNode);
-		
-		/* 요새는 이렇게 코딩안함.. Dom 참고용으로 하는거 */
-		document.body.appendChild(h3Element);
-	},2000);
-}
+	window.onload = function() {
+		setTimeout(function() {
+			var h3Element = document.createElement("h3");
+			var h3TextNode = document.createTextNode("Hello DOM");
+			h3Element.append(h3TextNode);
+
+			/* 요새는 이렇게 코딩안함.. Dom 참고용으로 하는거 */
+			document.body.appendChild(h3Element);
+		}, 2000);
+	}
 </script>
 </head>
 <body>

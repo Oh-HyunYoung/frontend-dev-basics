@@ -3,6 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.onload = function() {
+	setTimeout(function() {
+		var imgElement = document.createElement('img');
+		imgElement.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIWJHVySim54EiTKVfuYhWUqUWA5NWLQAmew&usqp=CAU';
+		imgElement.style.width = "200px";
+		imgElement.alt = '루피 귀여워';
+		imgElement.title = '루피';
+		//imgElement['data-no'] = 10; // 웹실행 화면에서 f12에 나타나지 않음 (숨김처리됨)
+				
+		document.body.appendChild(imgElement);
+	}, 2000);
+}
+</script>
 </head>
 <body>
 	<h1 id='h' data-no='10'>DOM(Document Object Model)</h1>
