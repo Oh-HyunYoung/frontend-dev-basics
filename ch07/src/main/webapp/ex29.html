@@ -6,6 +6,13 @@
 <script type="text/javascript">
 $(function() {
 	setTimeout(function(){
+		$("h2, p")
+			.wrapAll("<div>")
+			.parent()
+			.css({border: "1px solid #ccc",  // Travese ApI
+				  width: "200px",
+				  padding: "10px"
+				}); 
 	}, 2000);
 });  
 </script>
