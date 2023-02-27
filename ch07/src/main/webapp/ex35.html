@@ -6,7 +6,7 @@
 <script type="text/javascript">
 $(function() {
 	$('h1').hello();
-	$('btn').click(function(){
+	$('#btn').click(function(){
 		$(this).flash();
 	});
 });  
@@ -21,10 +21,10 @@ $.fn.flash = function() {
 	var _this = this;
 	var isBlink = false;
 	
-	setInteval(function(){
+	setInterval(function(){
 		_this.css('background-color',isBlink? "#f00": "#fff");
 		isBlink = !isBlink;
-	},500)
+	},500);
 }
 </script>
 </head>
