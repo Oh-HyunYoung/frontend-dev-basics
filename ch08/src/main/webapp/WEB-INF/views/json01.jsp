@@ -10,7 +10,7 @@
 $(function(){
 	$("button").click(function(){
 		$.ajax({
-			url: "/ch08/api/json",
+			url: "${pageContext.request.contextPath}/api/json",
 			async: true,
 			type:"get",
 			dataType: "json",

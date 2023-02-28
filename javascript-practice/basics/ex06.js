@@ -43,7 +43,7 @@ var o3 = {
 
 console.log(o3);
 
-// XmlHttpRequest 객체 사용해서 통신(AJAX)을 한다.
+// XMLHttpRequest 객체 사용해서 통신(AJAX)을 한다.
 var response = '{name: "둘리", age:10, email:"dooly@gmail.com" }';
 var userVo = eval("("+response+")");
 console.log(userVo);
