@@ -1,10 +1,14 @@
 $(function() {
-	$("#btn-change").click(function() {
+	// 한 번 클릭 시 이미지 변경
+	$("#btn-change").click(function _changeImage() {
 		var index = Math.floor(Math.random() * imageViewer._images.length);
+		var info = imageViewer._images[index];
+		console.log(info.name);
 		$("img").attr("src", imageViewer._images[index].file);
 	});
 
-	$("#btn-slideshow").click(function slideshow() {
+	// 슬라이드쇼 실행&중지
+	$("#btn-slideshow").click(function _slideshow() {
 		var count = setInterval(function(){
 		var index = Math.floor(Math.random() * imageViewer._images.length);
 		$("img").attr("src", imageViewer._images[index].file);
@@ -15,19 +19,8 @@ $(function() {
 			clearInterval(count);
 		})	
 	});
-
+	
 	imageViewer = {
-		init: function() {
-			for (var i = 0; i < 100; i++) {
-				this._changeImage();
-			}
-		},
-
-		_changeImage: function() {
-			var index = Math.floor(Math.random() * this._images.length);
-			console.log(index);
-		},
-
 		_intevalId: null,
 		_images: [{
 			name: '국화',
