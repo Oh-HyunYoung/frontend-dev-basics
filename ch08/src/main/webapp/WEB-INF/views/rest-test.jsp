@@ -29,6 +29,54 @@ $(function(){
 			}
 		});
 	});
+		$("#read").click(function(){
+			$.ajax({
+				url:"${pageContext.request.contextPath}/api/user",
+				type: "get",
+				dataType: "json",
+				success:function(response){
+					console.log(response);
+				}
+			});
+		});
+
+	$("#update").click(function(){
+		var vo = {
+			name: '둘리',
+			password: "12345",
+			gender: "male"
+		};
+		
+		$.ajax({
+			url:"${pageContext.request.contextPath}/api/user/10",
+			type: "put",
+			dataType: "json",
+			contentType: "application/json",
+			data: JSON.stringify(vo),
+			success:function(response){
+				console.log(response);
+			}
+		});
+	});
+	
+	$("#delete").click(function(){
+		var vo = {
+			name: '둘리',
+			password: "12345",
+			gender: "male"
+		};
+		
+		$.ajax({
+			url:"${pageContext.request.contextPath}/api/user/10",
+			type: "delete",
+			dataType: "json",
+			contentType: "application/x-www-form-urlencoded",
+			data: "password=1234",
+			success:function(response){
+				console.log(response);
+			}
+		});
+	});
 });
 </script>
 </head>
