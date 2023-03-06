@@ -21,3 +21,5 @@ try{
 } catch(e){
     console.error("error: "+e);
 }
+
+// 결과 에러 발생
