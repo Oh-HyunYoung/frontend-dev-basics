@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 <script src="${pageContext.request.contextPath }/jquery/jquery-3.6.0.js"></script>
 <script>
-var render = function(vo){
+var render = function(vo,mode){
 	var htmls =
 		"<li data-no=''>" +
 		"	<strong>" + vo.name + "</strong>" +
@@ -19,7 +19,7 @@ var render = function(vo){
 		"	<a href='' data-no=''>삭제</a>" + 
 		"</li>";
 	
-	$("#list-guestbook").prepend(htmls);
+		$("#list-guestbook")[mode? "prepend" : "append"](htmls);
 }
 
 $(function() {

@@ -78,7 +78,7 @@ $(function(){
 	// 메시지 삭제 버튼 click 이벤트 처리(Live Event)
 	$(document).on('click', "#list-guestbook li", function(event){
 		event.preventDefault();
-		
+		console.log($(this).data("no"));
 		$("#hidden-no").val($(this).data("no"));
 		$dialogDelete.dialog('open');
 	});
