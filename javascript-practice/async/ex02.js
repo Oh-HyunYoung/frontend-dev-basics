@@ -16,8 +16,9 @@ const myAsyncFn02 = function(param){
     });
 }
 
+if(require.main == module){
 // test01: success
-myAsyncFn02("data") // " " or "data"
+myAsyncFn02("") // "" 는 fail or "data" 는 success
     .then(function(result){
     console.log(result);
     })
@@ -26,5 +27,8 @@ myAsyncFn02("data") // " " or "data"
     .catch(function(error){
     console.error(error);
     });
-
-console.log("wait........");
+    
+    console.log("wait........");
+} else {
+    module.exports= myAsyncFn02;
+}
